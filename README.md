@@ -23,7 +23,7 @@ cd进目录可自动激活renv环境，并且下载所需的包。
 renv::install('languageserver','ggplot2','httpgd','jsonlite','rmarkdown','showtext', 'readxl')
 ```
 
-### 数据说明
+## 数据说明
 
 `2-4.r`表明是习题二的第四题，其余同理。
 
