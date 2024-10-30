@@ -1,0 +1,15 @@
+library(readxl)
+options(scipen = 999)
+data <- read_excel("3data.xlsx", sheet = "14")
+data$x1 <- scale(data$x1)
+data$x2 <- scale(data$x2)
+data$x3 <- scale(data$x3)
+data$y <- scale(data$y)
+# data$Y_scaled <- scale(data$y)
+model <- lm(y ~ x1 + x2 + x3, data = data)
+print(summary(model))
+# summary(step(model))
+
+# data_subset <- data.frame(y, x1, x2, x3)
+# pairs(data, main = "3-14:Scatter Plot Matrix of y, x1, x2, x3")
+
